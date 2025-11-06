@@ -5,74 +5,95 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jasmin Patiag | Portfolio</title>
   <style>
-    body {
+    /* --- FONT & BASE STYLE --- */
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+    * {
       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
       font-family: 'Poppins', sans-serif;
-      background-color: #fffafc;
-      color: #444;
+      background: linear-gradient(135deg, #f7c5cc, #f3e1e8, #f6d0de);
+      color: #333;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       height: 100vh;
       text-align: center;
+      overflow: hidden;
+    }
+
+    /* --- MAIN CONTENT --- */
+    .container {
+      background-color: rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(10px);
+      padding: 40px 60px;
+      border-radius: 30px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
     }
 
     h1 {
       font-size: 2.5em;
-      color: #d97ca4;
-      margin-bottom: 0.2em;
+      color: #b03a63;
+      margin-bottom: 10px;
     }
 
     h2 {
       font-size: 1.2em;
-      color: #888;
-      font-weight: normal;
-      margin-bottom: 1em;
+      color: #5b5b5b;
+      margin-bottom: 20px;
+      font-weight: 400;
     }
 
     p {
-      max-width: 500px;
+      font-size: 1em;
+      color: #444;
+      max-width: 480px;
       line-height: 1.6;
+      margin: 0 auto 25px;
     }
 
+    /* --- BUTTON --- */
     .btn {
       display: inline-block;
-      margin-top: 1.5em;
+      margin-top: 15px;
       padding: 10px 25px;
-      background-color: #f9d5e5;
-      color: #444;
+      background-color: #e6a4b4;
+      color: white;
       text-decoration: none;
       border-radius: 25px;
       font-weight: 600;
-      transition: background 0.3s ease;
+      transition: 0.3s ease;
     }
 
     .btn:hover {
-      background-color: #f7b5c9;
+      background-color: #cc879c;
     }
 
     footer {
       position: absolute;
       bottom: 15px;
       font-size: 0.8em;
-      color: #aaa;
+      color: #555;
     }
   </style>
 </head>
 <body>
-  <h1>Hi, I'm Jasmin Patiag 💻</h1>
-  <h2>Information Technology Student</h2>
-  <p>
-    A passionate IT student who loves creating clean, elegant, and user-friendly web designs. 
-    I’m currently learning how to blend creativity with technology — one project at a time.
-  </p>
-  <a href="mailto:jasminpatiag@email.com" class="btn">
-  <p>Email: <a href="mailto:jasminpatiag.it@gmail.com">jasminpatiag.it@gmail.com</a></p>
+  <div class="container">
+    <h1>Hi, I'm Jasmin Patiag 💻</h1>
+    <h2>Information Technology Student</h2>
+    <p>
+     An Information Technology student learning to create and innovate.
+    </p>
+    <a href="mailto:jasminpatiag@email.com" class="btn">
+  </div>
+  <p>Email: <a href="mailto:jasminpatiag.@gmail.com">jasminpatiag.@gmail.com</a></p>
     <p>GitHub: <a href="https://github.com/JASMIN-00" target="_blank">github.com/JASMIN-00</a></p>
 
-  <footer>
-    © 2025 Jasmin Patiag | Minimalist Portfolio
-  </footer>
+  <footer>© 2025 Jasmin Patiag | Minimalist Portfolio</footer>
 </body>
 </html>
+
