@@ -1,122 +1,218 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Jasmin Patiag | Portfolio</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
+
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+    /* ===== COLORS ===== */
+    :root {
+      --deep-red: #660810;
+      --dark-red: #27070a;
+      --grey-orange: #d6c0b1;
+    }
 
     * {
-      margin: 0;
-      padding: 0;
       box-sizing: border-box;
+      scroll-behavior: smooth;
     }
 
     body {
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #83AE9B, #C8C8A9, #F9CDAE);
-      color: #333;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      color: var(--grey-orange);
+      background: linear-gradient(270deg, var(--deep-red), var(--dark-red), var(--deep-red));
+      background-size: 400% 400%;
+      animation: moveBackground 15s ease infinite;
+    }
+
+    @keyframes moveBackground {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* HEADER */
+    header {
       text-align: center;
-      overflow: hidden;
-      animation: fadeIn 1.2s ease-in-out;
+      padding: 50px 20px;
+      background-color: rgba(102, 8, 16, 0.95);
+      border-bottom: 6px solid var(--grey-orange);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(5px);
     }
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(15px); }
-      to { opacity: 1; transform: translateY(0); }
+    header h1 {
+      margin: 0;
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: 3rem;
+      color: var(--grey-orange);
+      text-transform: uppercase;
+      letter-spacing: 2px;
     }
 
-    .container {
-      background-color: rgba(255, 255, 255, 0.3);
-      backdrop-filter: blur(12px);
-      padding: 50px 70px;
-      border-radius: 30px;
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease;
-    }
-
-    .container:hover {
-      transform: scale(1.02);
-    }
-
-    h1 {
-      font-size: 2.5em;
-      color: #b03a63;
-      margin-bottom: 10px;
-    }
-
-    h2 {
-      font-size: 1.2em;
-      color: #5b5b5b;
-      margin-bottom: 20px;
-      font-weight: 400;
-    }
-
-    p {
-      font-size: 1em;
-      color: #444;
-      max-width: 480px;
-      line-height: 1.6;
-      margin: 0 auto 20px;
-    }
-
-    .btn {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 10px 25px;
-      background-color: #e6a4b4;
-      color: white;
-      text-decoration: none;
-      border-radius: 25px;
-      font-weight: 600;
-      transition: 0.3s ease;
-    }
-
-    .btn:hover {
-      background-color: #cc879c;
-      transform: translateY(-2px);
-    }
-
-    .links a {
-      color: #b03a63;
-      text-decoration: none;
+    header p {
+      color: #f7e8e8;
+      margin-top: 10px;
       font-weight: 500;
-      transition: color 0.3s ease;
     }
 
-    .links a:hover {
-      color: #7b2c4c;
+    /* PROFILE SECTION */
+    .profile {
+      text-align: center;
+      padding: 50px 20px;
     }
 
+    .profile img {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 5px solid var(--grey-orange);
+      margin-bottom: 20px;
+      transition: transform 0.4s ease;
+    }
+
+    .profile img:hover {
+      transform: scale(1.1);
+    }
+
+    .profile h2 {
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: 1.8rem;
+      color: #fff;
+    }
+
+    .profile p {
+      max-width: 600px;
+      margin: 0 auto;
+      color: var(--grey-orange);
+      line-height: 1.6;
+    }
+
+    /* CONTENT SECTIONS */
+    section {
+      background-color: rgba(39, 7, 10, 0.85);
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    section:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.6);
+    }
+
+    section h3 {
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: 1.5rem;
+      color: var(--grey-orange);
+      border-left: 6px solid var(--grey-orange);
+      padding-left: 10px;
+      margin-bottom: 15px;
+    }
+
+    ul {
+      list-style-type: "💻 ";
+      padding-left: 25px;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+      color: #f1d8c8;
+    }
+
+    /* CONTACT SECTION */
+    .contact {
+      background-color: var(--deep-red);
+      color: var(--grey-orange);
+      text-align: center;
+      padding: 40px 20px;
+      border-top: 6px solid var(--grey-orange);
+    }
+
+    .contact h3 {
+      color: #fff;
+      font-family: 'Josefin Sans', sans-serif;
+    }
+
+    .contact a {
+      color: var(--grey-orange);
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .contact a:hover {
+      text-decoration: underline;
+    }
+
+    /* FOOTER */
     footer {
-      position: absolute;
-      bottom: 15px;
-      font-size: 0.8em;
-      color: #555;
+      text-align: center;
+      padding: 15px;
+      background-color: var(--dark-red);
+      color: var(--grey-orange);
+      font-size: 0.95rem;
+      border-top: 2px solid var(--grey-orange);
+    }
+
+    footer p {
+      margin: 5px 0;
     }
   </style>
 </head>
+
 <body>
-  <div class="container">
-    <h1>Hi, I'm Jasmin Patiag 💻</h1>
-    <h2>Information Technology Student</h2>
-    <p>An aspiring IT student learning to create, code, and innovate with purpose.</p>
 
-    <a href="mailto:jasminpatiag@gmail.com" class="btn">
+  <header>
+    <h1>Jasmin Patiag</h1>
+    <p>BSIT-2 | Aspiring Web Developer & Cloud </p>
+  </header>
 
-    <div class="links" style="margin-top: 20px;">
-      <p>Email: <a href="mailto:jasminpatiag@gmail.com">jasminpatiag@gmail.com</a></p>
-      <p>GitHub: <a href="https://github.com/JASMIN-00" target="_blank">github.com/JASMIN-00</a></p>
-    </div>
-  </div>
+  <section class="profile">
+    <img src="481898630_1487049646015464_7738763657454203940_n.jpg
+" alt="Jasmin Patiag">
+    <h2>Hello, I’m Jasmin</h2>
+    <p>Welcome to my portfolio! I’m an IT student passionate about web development, creativity, and cloud technology. I love designing clean and engaging digital experiences that tell stories through code.</p>
+  </section>
 
-  <footer>© 2025 Jasmin Patiag | Minimalist Portfolio</footer>
+  <section class="about">
+    <h3>About Me</h3>
+    <p>I’m currently a BSIT-2 student at <strong>College of the Immaculate Conception</strong>, majoring in Web Development and Cloud. I’m passionate about exploring new technologies, designing functional websites, and continuously learning to grow as a future IT professional.</p>
+  </section>
+
+  <section class="skills">
+    <h3>Skills</h3>
+    <ul>
+      <li>HTML & CSS (Web Design)</li>
+      <li>Python (Basic Programming)</li>
+      <li>Microsoft Office & Canva</li>
+    </ul>
+  </section>
+
+  <section class="goals">
+    <h3>My Goals</h3>
+    <p>My goal is to become a professional Web Developer and Cloud. I aim to build meaningful digital projects that combine creativity, functionality, and user-focused design.</p>
+  </section>
+
+  <section class="contact">
+    <h3>Contact Me</h3>
+    <p>📧 Email: <a href="mailto:patiagjasmin@gmail.com">patiagjasmin@gmail.com</a></p>
+    <p>🌐 GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/jasmin-00.github.io</a></p>
+  </section>
+
+  <footer>
+    <p> Designed with ❤️ and Passion</p>
+    <p>To: <strong>Mr. Florante III Sugian</strong></p>
+  </footer>
+
 </body>
 </html>
 
